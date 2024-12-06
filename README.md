@@ -8,13 +8,20 @@ Quick Start
 git clone https://github.com/yuhongwei380/keycloak-email-event-listener.git
 cd keycloak-email-event-listener
 
+#OR get it
+cp providers/keycloak-event-listener-1.0.0.jar    ../keycloak/
+
 # Build the extension
 mvn clean package
 
-# Copy JAR to Keycloak providers
-cp target/custom-event-listener.jar providers/
+# Copy JAR to Keycloak 
+cp target/keycloak-event-listener-1.0.0.jar.jar  ../keycloak/
 
-#vim docker-compose for keycloak like this ; you can fill it with your smtp server and which email address you want to receive the email when new user came in 
+#vim docker-compose for keycloak like this ; you can fill it with email  which  you want to receive the email when new user came in
+cd ../ && mkdir keycloak
+cd keycloak
+
+#docker-compose.yml for example
 keycloak:
     image: quay.io/keycloak/keycloak:26.0.1
     container_name: keycloak
@@ -26,11 +33,7 @@ keycloak:
           cpus: "2"              # 限制使用的 CPU 数量
           memory: "4G"  
     environment:
-      ···
-      - SMTP_EMAIL=   
-      - SMTP_PASSWORD=       
-      - SMTP_HOST=            
-      - SMTP_PORT=                         
+      ···                   
       - RECIPIENT_EMAIL=
     volumes:
       - ./keycloak-event-listener-1.0.0.jar:/opt/keycloak/providers/keycloak-event-listener-1.0.0.jar
