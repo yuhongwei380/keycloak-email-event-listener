@@ -34,7 +34,7 @@ keycloak:
           memory: "4G"  
     environment:
       ···                   
-      - RECIPIENT_EMAIL=
+      - RECIPIENT_EMAIL=youremail@email.com  #the email you want to receice the message when new user register
     volumes:
       - ./keycloak-event-listener-1.0.0.jar:/opt/keycloak/providers/keycloak-event-listener-1.0.0.jar
     command: 
