@@ -46,7 +46,7 @@
     </dependencies>
 
     <build>
-        <finalName>Newuser-email-event</finalName>
+        <finalName>newuser-email-event</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
