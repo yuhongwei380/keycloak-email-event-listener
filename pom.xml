@@ -8,7 +8,7 @@
     <version>26.0.1</version>
     <packaging>jar</packaging>
 
-    <name>Newusr-Email-event</name>
+    <name>Keycloak-Newusr-Email-event</name>
     <description>Keycloak Newusr Email Event Listener</description>
 
     <properties>
@@ -46,7 +46,7 @@
     </dependencies>
 
     <build>
-        <finalName>newuser-email-event</finalName>
+        <finalName>keycloak-newuser-email-event</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
