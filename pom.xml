@@ -5,11 +5,11 @@
 
     <groupId>com.phoenix</groupId>
     <artifactId>keycloak-event-listener</artifactId>
-    <version>1.0.0</version>
+    <version>26.0.1</version>
     <packaging>jar</packaging>
 
-    <name>keycloak-event-listener</name>
-    <description>Keycloak Event Listener Example</description>
+    <name>Email-event-listener</name>
+    <description>Keycloak Email Event Listener</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
