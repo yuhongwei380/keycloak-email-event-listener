@@ -7,7 +7,7 @@ import org.keycloak.models.KeycloakSessionFactory;
 
 public class EmailEventListenerProviderFactory implements EventListenerProviderFactory {
 
-    private static final String PROVIDER_ID = "email-event-listener";
+    private static final String PROVIDER_ID = "newuser-email-event-listener";
     private static String recipientEmail;
 
     @Override
