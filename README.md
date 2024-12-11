@@ -9,15 +9,15 @@ git clone https://github.com/yuhongwei380/keycloak-email-event-listener.git
 cd keycloak-email-event-listener
 
 #OR get it
-cp providers/newuser-email-event.jar    ../keycloak/
+cp providers/keycloak-newuser-email-event.jar    ../keycloak/
 
 # Build the extension
 mvn clean package
 
 # Copy JAR to Keycloak 
-cp target/newuser-email-event.jar  ../keycloak/
+cp target/keycloak-newuser-email-event.jar  ../keycloak/
 
-#vim docker-compose for keycloak like this ; you can fill it with email  which  you want to receive the email when new user came in
+#vim docker-compose for keycloak like this ; you can fill it with email  which  you want to receive the email when keycloak-new user came in
 cd ../ && mkdir keycloak
 cd keycloak
 
@@ -34,9 +34,9 @@ keycloak:
           memory: "4G"  
     environment:
       ···                   
-      - RECIPIENT_EMAIL=youremailaddress@email.com  #the email you want to receice the message when new user register
+      - RECIPIENT_EMAIL=youremailaddress@email.com  #the email you want to receice the message when keycloak-new user register
     volumes:
-      - ./newuser-email-event.jar:/opt/keycloak/providers/newuser-email-event.jar
+      - ./keycloak-newuser-email-event.jar:/opt/keycloak/providers/keycloak-newuser-email-event.jar
     command: 
       - start   #start-dev测试环境使用   start--optimized 第二次启动时可配置。
     networks:
